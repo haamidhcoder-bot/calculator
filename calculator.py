@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import messagebox
-from time import sleep
 import os
 
 window=Tk()
