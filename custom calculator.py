@@ -1,5 +1,5 @@
 from customtkinter import *
-from tkinter import messagebox,PhotoImage
+from tkinter import messagebox
 
 window=CTk()
 window.title("CALCULATOR")
