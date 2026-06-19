@@ -28,14 +28,6 @@ frame1.grid()
 num=Entry(frame1,font=("courier new",15),width=15)
 num.grid(row=2)
 
-def alternate():
-    global xtra1
-    if xtra1.winfo_exists():
-        messagebox.showwarning("Warning","close the already opened history window")
-    elif not(xtra1.winfo_exists()):
-        xtra1=None
-        hist()
-    
 def hist():
     global xtra1
     if xtra1 is None:
@@ -54,7 +46,11 @@ def hist():
         else:
             messagebox.showwarning("no history","no calculation made")
     else:
-        alternate()
+        if xtra1.winfo_exists():
+            messagebox.showwarning("Warning","close the already opened history window and check history again")
+        elif not(xtra1.winfo_exists()):
+            xtra1=None
+            hist()
 
 
 
